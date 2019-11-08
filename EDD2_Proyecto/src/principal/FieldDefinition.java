@@ -1,24 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package principal;
 
 /**
  *
  * @author angel
+ * Definición del campo en el archivo
+ * 
  */
 public class FieldDefinition {
+    
+    //Variables privadas
     private String name;
     private FieldType type;
     private int size;
     private int size_dec;
     private boolean key;
 
+    //Contructor por defecto
     public FieldDefinition() {
     }
-
+    
+    //Constructor sobrecargado
     public FieldDefinition(String name, FieldType type, int size, int size_dec, boolean key) {
         this.name = name;
         this.type = type;
@@ -27,6 +29,7 @@ public class FieldDefinition {
         this.key = key;
     }
 
+    //Getter & Setters de variables privadas
     public String getName() {
         return name;
     }

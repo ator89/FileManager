@@ -16,37 +16,45 @@ import java.util.ArrayList;
 /**
  *
  * @author angel
+ * Clase para administrar un archivo, escribir y cargar archivo binario
+ * 
  */
 public class adminArchivo {
     
+    //Lista de archivos
     private ArrayList<Archivo> listaArchivos = new ArrayList();
     private File archivo=null;
     
+    //Constructor
     public adminArchivo(String path){
         archivo= new File(path);
     }
 
+    //Getters
     public ArrayList<Archivo> getListaArchivos() {
         return listaArchivos;
     }
-
-    public void setListaArchivos(ArrayList<Archivo> listaArchivos) {
-        this.listaArchivos = listaArchivos;
-    }
-
+    
     public File getArchivo() {
         return archivo;
+    }
+
+    //Setters
+    public void setListaArchivos(ArrayList<Archivo> listaArchivos) {
+        this.listaArchivos = listaArchivos;
     }
 
     public void setArchivo(File archivo) {
         this.archivo = archivo;
     }
     
+    //Agregar archivo a la lista de archivos
     public void agregarArchivo(Archivo arch){
         this.listaArchivos.add(arch);
     }
     
-        public void cargarArchivo(){
+    //Cargar el archivo binario
+    public void cargarArchivo(){
         try{
             listaArchivos = new ArrayList();
             Archivo temp;
@@ -69,6 +77,7 @@ public class adminArchivo {
         }
     }
     
+    //Escribir archivo binario
     public void escribirArchivo(){
         FileOutputStream fw=null;
         ObjectOutputStream bw=null;

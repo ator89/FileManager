@@ -6,6 +6,7 @@ import java.io.Serializable;
 /**
  *
  * @author angel
+ * Clase "Archivo" para archivos binarios
  */
 public class Archivo implements Serializable {
     

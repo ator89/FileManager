@@ -17,6 +17,7 @@ public class EDD2_Proyecto {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        
         Field campo1 = new Field();
         
         String atributo1 = "String";
