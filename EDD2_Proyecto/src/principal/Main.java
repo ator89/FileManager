@@ -29,7 +29,7 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
+        jd_add_fields = new javax.swing.JDialog();
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
@@ -55,7 +55,8 @@ public class Main extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        jm_fields = new javax.swing.JMenu();
+        jmi_add_fields = new javax.swing.JMenuItem();
 
         jButton1.setText("Agregar Campo");
 
@@ -155,17 +156,17 @@ public class Main extends javax.swing.JFrame {
                 .addGap(21, 21, 21))
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jd_add_fieldsLayout = new javax.swing.GroupLayout(jd_add_fields.getContentPane());
+        jd_add_fields.getContentPane().setLayout(jd_add_fieldsLayout);
+        jd_add_fieldsLayout.setHorizontalGroup(
+            jd_add_fieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_add_fieldsLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 96, Short.MAX_VALUE))
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
+        jd_add_fieldsLayout.setVerticalGroup(
+            jd_add_fieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_add_fieldsLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 41, Short.MAX_VALUE))
         );
@@ -238,8 +239,17 @@ public class Main extends javax.swing.JFrame {
 
         jMenuBar1.add(jm_archivo);
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jm_fields.setText("Fields");
+
+        jmi_add_fields.setText("Add Fields");
+        jmi_add_fields.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_add_fieldsActionPerformed(evt);
+            }
+        });
+        jm_fields.add(jmi_add_fields);
+
+        jMenuBar1.add(jm_fields);
 
         setJMenuBar(jMenuBar1);
 
@@ -247,11 +257,11 @@ public class Main extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 574, Short.MAX_VALUE)
+            .addGap(0, 706, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGap(0, 465, Short.MAX_VALUE)
         );
 
         pack();
@@ -281,6 +291,13 @@ public class Main extends javax.swing.JFrame {
         tf_nombre_archivo.setText("");
         
     }//GEN-LAST:event_bt_save_new_fileMouseClicked
+
+    private void jmi_add_fieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_add_fieldsActionPerformed
+        this.jd_add_fields.setModal(true);
+        jd_add_fields.pack();
+        jd_add_fields.setLocationRelativeTo(this);
+        jd_add_fields.setVisible(true);
+    }//GEN-LAST:event_jmi_add_fieldsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,10 +343,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
@@ -341,8 +356,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JDialog jd_add_fields;
     private javax.swing.JDialog jd_nuevo_archivo;
     private javax.swing.JMenu jm_archivo;
+    private javax.swing.JMenu jm_fields;
+    private javax.swing.JMenuItem jmi_add_fields;
     private javax.swing.JMenuItem jmi_nuevo_archivo;
     private javax.swing.JTextField tf_nombre_archivo;
     // End of variables declaration//GEN-END:variables
