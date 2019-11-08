@@ -89,11 +89,6 @@ public class Main extends javax.swing.JFrame {
         btg_primaryKey.add(jRadioButton2);
         jRadioButton2.setSelected(true);
         jRadioButton2.setText("No Primaria");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHAR", "INTF", "INTDEC" }));
 
@@ -270,10 +265,7 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
-
+    //abrir ventana desde el menu de archivo
     private void jmi_nuevo_archivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_nuevo_archivoActionPerformed
         this.jd_nuevo_archivo.setModal(true);
         jd_nuevo_archivo.pack();

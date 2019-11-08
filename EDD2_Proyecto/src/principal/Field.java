@@ -6,7 +6,7 @@ import java.util.HashMap;
 /**
  *
  * @author angel
- * 
+ * Clase campo para agregar el tipo y el nombre
  * 
  */
 
