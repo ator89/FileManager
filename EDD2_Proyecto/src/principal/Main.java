@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package principal;
 
 import javax.swing.JOptionPane;
@@ -42,19 +38,21 @@ public class Main extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
         btg_primaryKey = new javax.swing.ButtonGroup();
         jd_nuevo_archivo = new javax.swing.JDialog();
         tf_nombre_archivo = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         bt_save_new_file = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        jmb_main_window = new javax.swing.JMenuBar();
         jm_archivo = new javax.swing.JMenu();
         jmi_nuevo_archivo = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jmi_archivo_save = new javax.swing.JMenuItem();
+        jmi_archivo_cerrar = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jmi_archivo_salir = new javax.swing.JMenuItem();
         jm_fields = new javax.swing.JMenu();
         jmi_add_fields = new javax.swing.JMenuItem();
 
@@ -99,6 +97,8 @@ public class Main extends javax.swing.JFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CHAR", "INTF", "INTDEC" }));
 
+        jLabel2.setText("Nombre del campo:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -107,68 +107,71 @@ public class Main extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButton2))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jButton1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButton2)
-                            .addGap(18, 18, 18)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(64, 246, Short.MAX_VALUE))
+                        .addGap(6, 6, 6)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jRadioButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jRadioButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(72, 72, 72)
+                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(81, 81, 81))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addGap(43, 43, 43)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(115, 115, 115)
-                        .addComponent(jButton2)))
-                .addGap(55, 55, 55)
+                        .addComponent(jButton2)
+                        .addGap(166, 166, 166))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jRadioButton1)
                     .addComponent(jButton3)
-                    .addComponent(jButton1))
-                .addGap(21, 21, 21))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jd_add_fieldsLayout = new javax.swing.GroupLayout(jd_add_fields.getContentPane());
         jd_add_fields.getContentPane().setLayout(jd_add_fieldsLayout);
         jd_add_fieldsLayout.setHorizontalGroup(
             jd_add_fieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_add_fieldsLayout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 96, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jd_add_fieldsLayout.setVerticalGroup(
             jd_add_fieldsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_add_fieldsLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 41, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         jd_nuevo_archivo.setTitle("Crear Nuevo Archivo");
@@ -226,18 +229,18 @@ public class Main extends javax.swing.JFrame {
         });
         jm_archivo.add(jmi_nuevo_archivo);
 
-        jMenuItem2.setText("Salvar");
-        jMenuItem2.setEnabled(false);
-        jm_archivo.add(jMenuItem2);
+        jmi_archivo_save.setText("Salvar");
+        jmi_archivo_save.setEnabled(false);
+        jm_archivo.add(jmi_archivo_save);
 
-        jMenuItem4.setText("Cerrar");
-        jm_archivo.add(jMenuItem4);
+        jmi_archivo_cerrar.setText("Cerrar");
+        jm_archivo.add(jmi_archivo_cerrar);
         jm_archivo.add(jSeparator1);
 
-        jMenuItem3.setText("Salir");
-        jm_archivo.add(jMenuItem3);
+        jmi_archivo_salir.setText("Salir");
+        jm_archivo.add(jmi_archivo_salir);
 
-        jMenuBar1.add(jm_archivo);
+        jmb_main_window.add(jm_archivo);
 
         jm_fields.setText("Fields");
 
@@ -249,9 +252,9 @@ public class Main extends javax.swing.JFrame {
         });
         jm_fields.add(jmi_add_fields);
 
-        jMenuBar1.add(jm_fields);
+        jmb_main_window.add(jm_fields);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jmb_main_window);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -344,23 +347,25 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JDialog jd_add_fields;
     private javax.swing.JDialog jd_nuevo_archivo;
     private javax.swing.JMenu jm_archivo;
     private javax.swing.JMenu jm_fields;
+    private javax.swing.JMenuBar jmb_main_window;
     private javax.swing.JMenuItem jmi_add_fields;
+    private javax.swing.JMenuItem jmi_archivo_cerrar;
+    private javax.swing.JMenuItem jmi_archivo_salir;
+    private javax.swing.JMenuItem jmi_archivo_save;
     private javax.swing.JMenuItem jmi_nuevo_archivo;
     private javax.swing.JTextField tf_nombre_archivo;
     // End of variables declaration//GEN-END:variables
