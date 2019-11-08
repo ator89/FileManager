@@ -281,6 +281,7 @@ public class Main extends javax.swing.JFrame {
         jd_nuevo_archivo.setVisible(true);
     }//GEN-LAST:event_jmi_nuevo_archivoActionPerformed
 
+    //Guardar el archivo binario en directorio raiz
     private void bt_save_new_fileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_save_new_fileMouseClicked
         Archivo p = new Archivo(tf_nombre_archivo.getText());
         
@@ -295,6 +296,7 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_bt_save_new_fileMouseClicked
 
+    //Abrir desde el menú de ventana principal ventana (JDialog) para agregar campos
     private void jmi_add_fieldsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_add_fieldsActionPerformed
         this.jd_add_fields.setModal(true);
         jd_add_fields.pack();

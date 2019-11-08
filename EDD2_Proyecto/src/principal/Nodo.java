@@ -11,14 +11,17 @@ public class Nodo {
     private int data;
     private Nodo link;
 
+    //Constructor por defecto
     public Nodo() {
     }
 
+    //Constructor sobrecargado
     public Nodo(int data, Nodo link) {
         this.data = data;
         this.link = link;
     }
 
+    //Getters & Setters de Nodo
     public int getData() {
         return data;
     }
