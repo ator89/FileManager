@@ -20,7 +20,11 @@ public class Nodo {
         this.data = data;
         this.link = link;
     }
-
+    
+    //constructor necesario en caso de implemetar una pila(prueba)
+    public Nodo(int data){
+        this.data=data;
+    }
     //Getters & Setters de Nodo
     public int getData() {
         return data;
