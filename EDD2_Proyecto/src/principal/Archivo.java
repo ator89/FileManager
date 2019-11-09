@@ -9,7 +9,7 @@ import java.io.Serializable;
  * Clase "Archivo" para archivos binarios
  */
 
-//comentario de prueba
+
 
 public class Archivo implements Serializable {
     
