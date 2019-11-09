@@ -8,6 +8,9 @@ import java.io.Serializable;
  * @author angel
  * Clase "Archivo" para archivos binarios
  */
+
+//comentario de prueba
+
 public class Archivo implements Serializable {
     
     private String nombre;

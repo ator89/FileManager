@@ -233,6 +233,11 @@ public class Main extends javax.swing.JFrame {
         jm_archivo.add(jSeparator1);
 
         jmi_archivo_salir.setText("Salir");
+        jmi_archivo_salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_archivo_salirActionPerformed(evt);
+            }
+        });
         jm_archivo.add(jmi_archivo_salir);
 
         jmb_main_window.add(jm_archivo);
@@ -295,6 +300,10 @@ public class Main extends javax.swing.JFrame {
         jd_add_fields.setLocationRelativeTo(this);
         jd_add_fields.setVisible(true);
     }//GEN-LAST:event_jmi_add_fieldsActionPerformed
+
+    private void jmi_archivo_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_archivo_salirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmi_archivo_salirActionPerformed
 
     /**
      * @param args the command line arguments
