@@ -2,6 +2,7 @@
 package principal;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 
 /**
  *
@@ -14,6 +15,7 @@ import java.io.Serializable;
 public class Archivo implements Serializable {
     
     private String nombre;
+    private LinkedList <Field> listaCampos = new LinkedList<>();
     
     private static final long SerialVersionUID=777L;
 
@@ -32,6 +34,8 @@ public class Archivo implements Serializable {
         this.nombre = nombre;
     }
     
-    
+    public void agregarCampo(Field campo){
+        listaCampos.add(campo);
+    }
     
 }
