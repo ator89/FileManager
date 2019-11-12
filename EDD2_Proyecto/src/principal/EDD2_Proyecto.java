@@ -26,6 +26,7 @@ public class EDD2_Proyecto {
         campo1.addValue(atributo1, valor1);
         
         System.out.println("valor del attr1: " + campo1.getValue(atributo1));
+        
     }
     
 }
