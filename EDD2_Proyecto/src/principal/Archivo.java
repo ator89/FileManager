@@ -20,20 +20,24 @@ import java.util.Scanner;
 
 
 public class Archivo implements Serializable {
+    
     int cont;// archivo1-archivo2...
     private String nombre;
-    private LinkedList <Registro> lista_registros = new LinkedList<>();
-    private LinkedList <Registro> registros_recuperados = new LinkedList<>();
+    private LinkedList <Metadata> lista_metadata = new LinkedList<>();
+
     private static final long SerialVersionUID=777L;
 
+    //Constructor por defecto
     public Archivo() {
     }
 
+    //COnstructor sobrecargado
     public Archivo(String nombre) {
         cont=0;
         this.nombre=nombre;
     }
 
+    //Getter & Setters
     public String getNombre() {
         return nombre;
     }
@@ -41,6 +45,16 @@ public class Archivo implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    //Agregar un archivo de metadata a la lista doblemente enlazada a la vez
+    public void addMetadata(Metadata m){
+        lista_metadata.add(m);
+    }
+    
+    
+    
+    
+    /*
 
     public LinkedList<Registro> getLista_registros() {
         return lista_registros;
@@ -83,6 +97,8 @@ public class Archivo implements Serializable {
             
         }
     }
+
+    */
     
     
 }
