@@ -13,17 +13,16 @@ import java.util.Scanner;
 
 /**
  *
- * @author angel
+ * @author angel y edas
  * Clase "Archivo" para archivos binarios
  */
-
-
 
 public class Archivo implements Serializable {
     
     int cont;// archivo1-archivo2...
     private String nombre;
     private LinkedList <Metadata> lista_metadata = new LinkedList<>();
+    private LinkedList <Field> availability_list = new LinkedList<>();
 
     private static final long SerialVersionUID=777L;
 
@@ -44,6 +43,22 @@ public class Archivo implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public LinkedList<Metadata> getLista_metadata() {
+        return lista_metadata;
+    }
+
+    public void setLista_metadata(LinkedList<Metadata> lista_metadata) {
+        this.lista_metadata = lista_metadata;
+    }
+
+    public LinkedList<Field> getAvailability_list() {
+        return availability_list;
+    }
+
+    public void setAvailability_list(LinkedList<Field> availability_list) {
+        this.availability_list = availability_list;
     }
     
     //Agregar un archivo de metadata a la lista doblemente enlazada a la vez

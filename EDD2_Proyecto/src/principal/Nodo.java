@@ -7,6 +7,7 @@ package principal;
  * Clase nodo para una llave de tipo Field con enlaces 
  * de izquierda y derecha del nodo
  */
+
 public class Nodo {
     
     private int key;
