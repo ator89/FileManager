@@ -3,39 +3,60 @@ package principal;
 
 /**
  *
- * @author angel
- * Clase nodo reservando para un int
+ * @author angel y edas
+ * Clase nodo para una llave de tipo Field con enlaces 
+ * de izquierda y derecha del nodo
  */
 public class Nodo {
     
-    private int data;
-    private Nodo link;
+    private int key;
+    private Field data;
+    private Nodo left;
+    private Nodo right;
 
     //Constructor por defecto
     public Nodo() {
     }
 
     //Constructor sobrecargado
-    public Nodo(int data, Nodo link) {
+    public Nodo(int key, Field data, Nodo left, Nodo right) {
+        this.key = key;
         this.data = data;
-        this.link = link;
+        this.left = left;
+        this.right = right;
     }
 
     //Getters & Setters de Nodo
-    public int getData() {
+    public Field getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(Field data) {
         this.data = data;
     }
 
-    public Nodo getLink() {
-        return link;
+    public Nodo getLeft() {
+        return left;
     }
 
-    public void setLink(Nodo link) {
-        this.link = link;
+    public void setLeft(Nodo left) {
+        this.left = left;
+    }
+    
+    public Nodo getRight(){    
+        return right;
+    }
+    
+    public void setRight(Nodo right) {
+        this.right = right;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
     
 }
