@@ -38,7 +38,7 @@ public class Metadata {
         this.listaCampos = listaCampos;
     }
     
-    //agregar una lista de campos a la metadata
+    //agre
     public void addCampo(Field c){
         listaCampos.add(c);
     }
